@@ -1,0 +1,78 @@
+{
+  "disableEmoji": false,
+  "list": [
+    "test",
+    "feat",
+    "fix",
+    "chore",
+    "docs",
+    "refactor",
+    "style",
+    "ci",
+    "perf"
+  ],
+  "maxMessageLength": 64,
+  "minMessageLength": 3,
+  "questions": [
+    "type",
+    "scope",
+    "subject",
+    "body",
+    "breaking",
+    "issues",
+    "lerna"
+  ],
+  "scopes": [],
+  "types": {
+    "chore": {
+      "description": "Build process or auxiliary tool changes",
+      "emoji": ":hammer:",
+      "value": "chore"
+    },
+    "ci": {
+      "description": "CI related changes",
+      "emoji": ":ferris_wheel:",
+      "value": "ci"
+    },
+    "docs": {
+      "description": "Documentation only changes",
+      "emoji": ":pencil2:",
+      "value": "docs"
+    },
+    "feat": {
+      "description": "A new feature",
+      "emoji": ":trollface:",
+      "value": "feat"
+    },
+    "fix": {
+      "description": "A bug fix",
+      "emoji": ":bug:",
+      "value": "fix"
+    },
+    "perf": {
+      "description": "A code change that improves performance",
+      "emoji": ":rocket:",
+      "value": "perf"
+    },
+    "refactor": {
+      "description": "A code change that neither fixes a bug or adds a feature",
+      "emoji": ":bulb:",
+      "value": "refactor"
+    },
+    "release": {
+      "description": "Create a release commit",
+      "emoji": ":squirrel:",
+      "value": "release"
+    },
+    "style": {
+      "description": "Markup, white-space, formatting, missing semi-colons...",
+      "emoji": ":lipstick:",
+      "value": "style"
+    },
+    "test": {
+      "description": "Adding missing tests",
+      "emoji": ":ring:",
+      "value": "test"
+    }
+  }
+}

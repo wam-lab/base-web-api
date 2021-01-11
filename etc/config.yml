@@ -1,0 +1,12 @@
+Name: Application Name
+Server:
+  Port: 8080
+  Host: 0.0.0.0
+Mysql:
+  DataSource: root:123456@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local
+  Prefix: bwa
+  MaxIdle: 50
+  MaxOpen: 100
+Jwt:
+  Secret: yoursecret
+  Expire: 604800
