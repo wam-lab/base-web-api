@@ -18,9 +18,7 @@ func Register(c *gin.Context) {
 }
 
 func RefreshToken(c *gin.Context) {
-	response.Json(c, errno.OK.WithData("refresh"))
-}
-
-func UserInfo(c *gin.Context) {
-
+	response.Json(c, errno.OK.WithData(map[string]interface{}{
+		"newToken": "xxx.xx.xx",
+	}))
 }
