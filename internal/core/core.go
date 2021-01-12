@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/wam-lab/base-web-api/internal/global"
 	"github.com/wam-lab/base-web-api/internal/router"
-	"log"
+	"go.uber.org/zap"
 	"net/http"
 	"os"
 	"os/signal"
@@ -15,7 +15,6 @@ import (
 
 func Run() {
 	c := global.Config
-
 	r := router.Router()
 
 	s := &http.Server{
@@ -28,7 +27,7 @@ func Run() {
 
 	go func() {
 		if err := s.ListenAndServe(); err != nil {
-			log.Println(err)
+			global.Log.Error("Server run error", zap.Any("err", err))
 		}
 	}()
 
@@ -39,8 +38,7 @@ func Run() {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	if err := s.Shutdown(ctx); err != nil {
-		// TODO: use zap log
-		log.Printf("Server shutdown: %+v", err)
+		global.Log.Error("Server shutdown", zap.Any("err", err))
 	}
-	log.Println("Server exit")
+	global.Log.Info("Server exit")
 }
